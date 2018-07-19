@@ -1,5 +1,5 @@
 FROM alpine
 RUN apk add --update rethinkdb \
     && rm -rf /var/cache/apk/*
-ENTRYPOINT ["rethinkdb", "proxy", "--bind", "all"]
+ENTRYPOINT ["rethinkdb", "proxy", "--bind-driver", "all"]
 
